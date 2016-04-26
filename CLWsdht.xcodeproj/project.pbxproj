@@ -10,6 +10,18 @@
 		2944D8651C848313005B6A95 /* PartsListData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2944D8641C848313005B6A95 /* PartsListData.m */; };
 		2944D8681C84839C005B6A95 /* PartsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2944D8671C84839C005B6A95 /* PartsData.m */; };
 		2944D86B1C8484CB005B6A95 /* PartsModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2944D86A1C8484CB005B6A95 /* PartsModal.m */; };
+		2F8AF7871CCF988A00E8AAD0 /* MyWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AF7781CCF988A00E8AAD0 /* MyWalletViewController.m */; };
+		2F8AF7881CCF988A00E8AAD0 /* MyWalletModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AF77B1CCF988A00E8AAD0 /* MyWalletModel.m */; };
+		2F8AF7891CCF988A00E8AAD0 /* MyWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AF77E1CCF988A00E8AAD0 /* MyWalletView.m */; };
+		2F8AF78A1CCF988A00E8AAD0 /* WithdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AF7821CCF988A00E8AAD0 /* WithdrawalViewController.m */; };
+		2F8AF78B1CCF988A00E8AAD0 /* WithdrawalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AF7861CCF988A00E8AAD0 /* WithdrawalView.m */; };
+		2F8AF79A1CCF989800E8AAD0 /* MyShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AF78F1CCF989800E8AAD0 /* MyShopViewController.m */; };
+		2F8AF79B1CCF989800E8AAD0 /* CustomSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AF7931CCF989800E8AAD0 /* CustomSegment.m */; };
+		2F8AF79C1CCF989800E8AAD0 /* MyShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AF7961CCF989800E8AAD0 /* MyShopModel.m */; };
+		2F8AF79D1CCF989800E8AAD0 /* MyShopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AF7991CCF989800E8AAD0 /* MyShopTableViewCell.m */; };
+		2F8AF7A11CCF9B9600E8AAD0 /* daijiesuan.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F8AF79E1CCF9B9600E8AAD0 /* daijiesuan.png */; };
+		2F8AF7A21CCF9B9600E8AAD0 /* per_buyers.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F8AF79F1CCF9B9600E8AAD0 /* per_buyers.png */; };
+		2F8AF7A31CCF9B9600E8AAD0 /* yijiesuan.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F8AF7A01CCF9B9600E8AAD0 /* yijiesuan.png */; };
 		58099BEF1CCE584F00BE194E /* ChooseCarTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58099BC81CCE584E00BE194E /* ChooseCarTypeViewController.m */; };
 		58099BF01CCE584F00BE194E /* ChooseCarTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58099BC91CCE584E00BE194E /* ChooseCarTypeViewController.xib */; };
 		58099BF11CCE584F00BE194E /* ChoosePartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58099BCB1CCE584E00BE194E /* ChoosePartsViewController.m */; };
@@ -194,6 +206,27 @@
 		2944D8671C84839C005B6A95 /* PartsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartsData.m; sourceTree = "<group>"; };
 		2944D8691C8484CB005B6A95 /* PartsModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartsModal.h; sourceTree = "<group>"; };
 		2944D86A1C8484CB005B6A95 /* PartsModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartsModal.m; sourceTree = "<group>"; };
+		2F8AF7771CCF988A00E8AAD0 /* MyWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWalletViewController.h; sourceTree = "<group>"; };
+		2F8AF7781CCF988A00E8AAD0 /* MyWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWalletViewController.m; sourceTree = "<group>"; };
+		2F8AF77A1CCF988A00E8AAD0 /* MyWalletModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWalletModel.h; sourceTree = "<group>"; };
+		2F8AF77B1CCF988A00E8AAD0 /* MyWalletModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWalletModel.m; sourceTree = "<group>"; };
+		2F8AF77D1CCF988A00E8AAD0 /* MyWalletView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWalletView.h; sourceTree = "<group>"; };
+		2F8AF77E1CCF988A00E8AAD0 /* MyWalletView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWalletView.m; sourceTree = "<group>"; };
+		2F8AF7811CCF988A00E8AAD0 /* WithdrawalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawalViewController.h; sourceTree = "<group>"; };
+		2F8AF7821CCF988A00E8AAD0 /* WithdrawalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawalViewController.m; sourceTree = "<group>"; };
+		2F8AF7851CCF988A00E8AAD0 /* WithdrawalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawalView.h; sourceTree = "<group>"; };
+		2F8AF7861CCF988A00E8AAD0 /* WithdrawalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawalView.m; sourceTree = "<group>"; };
+		2F8AF78E1CCF989800E8AAD0 /* MyShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShopViewController.h; sourceTree = "<group>"; };
+		2F8AF78F1CCF989800E8AAD0 /* MyShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyShopViewController.m; sourceTree = "<group>"; };
+		2F8AF7921CCF989800E8AAD0 /* CustomSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegment.h; sourceTree = "<group>"; };
+		2F8AF7931CCF989800E8AAD0 /* CustomSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegment.m; sourceTree = "<group>"; };
+		2F8AF7951CCF989800E8AAD0 /* MyShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShopModel.h; sourceTree = "<group>"; };
+		2F8AF7961CCF989800E8AAD0 /* MyShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyShopModel.m; sourceTree = "<group>"; };
+		2F8AF7981CCF989800E8AAD0 /* MyShopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShopTableViewCell.h; sourceTree = "<group>"; };
+		2F8AF7991CCF989800E8AAD0 /* MyShopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyShopTableViewCell.m; sourceTree = "<group>"; };
+		2F8AF79E1CCF9B9600E8AAD0 /* daijiesuan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daijiesuan.png; sourceTree = "<group>"; };
+		2F8AF79F1CCF9B9600E8AAD0 /* per_buyers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = per_buyers.png; sourceTree = "<group>"; };
+		2F8AF7A01CCF9B9600E8AAD0 /* yijiesuan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yijiesuan.png; sourceTree = "<group>"; };
 		39BB54A6DD09D6E8547EFEDB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		42BD9AE0019662919FB673B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		58099BC71CCE584E00BE194E /* ChooseCarTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseCarTypeViewController.h; sourceTree = "<group>"; };
@@ -526,6 +559,134 @@
 			);
 			name = "oyj-modal";
 			path = ../Login/Model;
+			sourceTree = "<group>";
+		};
+		2F8AF7751CCF988A00E8AAD0 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF7761CCF988A00E8AAD0 /* Controller */,
+				2F8AF7791CCF988A00E8AAD0 /* Model */,
+				2F8AF77C1CCF988A00E8AAD0 /* View */,
+				2F8AF77F1CCF988A00E8AAD0 /* Withdrawal */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		2F8AF7761CCF988A00E8AAD0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF7771CCF988A00E8AAD0 /* MyWalletViewController.h */,
+				2F8AF7781CCF988A00E8AAD0 /* MyWalletViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F8AF7791CCF988A00E8AAD0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF77A1CCF988A00E8AAD0 /* MyWalletModel.h */,
+				2F8AF77B1CCF988A00E8AAD0 /* MyWalletModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F8AF77C1CCF988A00E8AAD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF77D1CCF988A00E8AAD0 /* MyWalletView.h */,
+				2F8AF77E1CCF988A00E8AAD0 /* MyWalletView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F8AF77F1CCF988A00E8AAD0 /* Withdrawal */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF7801CCF988A00E8AAD0 /* Controller */,
+				2F8AF7831CCF988A00E8AAD0 /* Model */,
+				2F8AF7841CCF988A00E8AAD0 /* View */,
+			);
+			path = Withdrawal;
+			sourceTree = "<group>";
+		};
+		2F8AF7801CCF988A00E8AAD0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF7811CCF988A00E8AAD0 /* WithdrawalViewController.h */,
+				2F8AF7821CCF988A00E8AAD0 /* WithdrawalViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F8AF7831CCF988A00E8AAD0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F8AF7841CCF988A00E8AAD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF7851CCF988A00E8AAD0 /* WithdrawalView.h */,
+				2F8AF7861CCF988A00E8AAD0 /* WithdrawalView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F8AF78C1CCF989800E8AAD0 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF78D1CCF989800E8AAD0 /* Controller */,
+				2F8AF7901CCF989800E8AAD0 /* lib */,
+				2F8AF7941CCF989800E8AAD0 /* Model */,
+				2F8AF7971CCF989800E8AAD0 /* View */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		2F8AF78D1CCF989800E8AAD0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF78E1CCF989800E8AAD0 /* MyShopViewController.h */,
+				2F8AF78F1CCF989800E8AAD0 /* MyShopViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F8AF7901CCF989800E8AAD0 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF7911CCF989800E8AAD0 /* CustomSegment */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		2F8AF7911CCF989800E8AAD0 /* CustomSegment */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF7921CCF989800E8AAD0 /* CustomSegment.h */,
+				2F8AF7931CCF989800E8AAD0 /* CustomSegment.m */,
+			);
+			path = CustomSegment;
+			sourceTree = "<group>";
+		};
+		2F8AF7941CCF989800E8AAD0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF7951CCF989800E8AAD0 /* MyShopModel.h */,
+				2F8AF7961CCF989800E8AAD0 /* MyShopModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F8AF7971CCF989800E8AAD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F8AF7981CCF989800E8AAD0 /* MyShopTableViewCell.h */,
+				2F8AF7991CCF989800E8AAD0 /* MyShopTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3E236D2E4348547FAC6A846D /* Pods */ = {
@@ -1140,6 +1301,7 @@
 		C9D8295A1C49F4130063EBC6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2F8AF78C1CCF989800E8AAD0 /* Store */,
 				C9D8295B1C49F4130063EBC6 /* MyShopVC.h */,
 				C9D8295C1C49F4130063EBC6 /* MyShopVC.m */,
 				C9342B291C49F7E6000C8B97 /* MyShopReleaseVC.h */,
@@ -1201,6 +1363,7 @@
 		DF0991731C55F676001B6F2D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2F8AF7751CCF988A00E8AAD0 /* Wallet */,
 				98A109A21CC5FD1D0040549D /* MaintainOrderViewController.h */,
 				98A109A31CC5FD1D0040549D /* MaintainOrderViewController.m */,
 				98A109A41CC5FD1D0040549D /* MyOrderViewController.h */,
@@ -1339,6 +1502,9 @@
 		DFDF91FC1CB87074003A9EF5 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				2F8AF79E1CCF9B9600E8AAD0 /* daijiesuan.png */,
+				2F8AF79F1CCF9B9600E8AAD0 /* per_buyers.png */,
+				2F8AF7A01CCF9B9600E8AAD0 /* yijiesuan.png */,
 				DF7507871CC8799B00BA40EB /* splash01.png */,
 				DF563CA11CBC7C5F00C8C031 /* woyaomaiche_mg_xiangji.png */,
 				DF563C9D1CBC7B6F00C8C031 /* shangchuanzhaopian_mg_zuoqian@2x.png */,
@@ -1419,6 +1585,7 @@
 				58099BF41CCE584F00BE194E /* SupplierReceiveViewController.xib in Resources */,
 				58099BFE1CCE584F00BE194E /* shang.png in Resources */,
 				DF0991CB1C585634001B6F2D /* Assets.xcassets in Resources */,
+				2F8AF7A21CCF9B9600E8AAD0 /* per_buyers.png in Resources */,
 				DFDF91FF1CB87074003A9EF5 /* homebg.png in Resources */,
 				DF563C931CBC5F4C00C8C031 /* arrow_right.png in Resources */,
 				989626951CA3DB6B00B6F9EB /* per_yrz.png in Resources */,
@@ -1429,6 +1596,8 @@
 				DF563CA01CBC7B6F00C8C031 /* woyaomaiche_mg_xiangji@2x.png in Resources */,
 				DF563CBA1CBC7DFF00C8C031 /* TextInputCell.xib in Resources */,
 				C9622DCE1C4B40E700AE849E /* ZLPhotoLib.bundle in Resources */,
+				2F8AF7A11CCF9B9600E8AAD0 /* daijiesuan.png in Resources */,
+				2F8AF7A31CCF9B9600E8AAD0 /* yijiesuan.png in Resources */,
 				58099BF01CCE584F00BE194E /* ChooseCarTypeViewController.xib in Resources */,
 				DF563CB31CBC7DFF00C8C031 /* CapturerCell.xib in Resources */,
 				58099C2D1CCE5CFA00BE194E /* CarType.plist in Resources */,
@@ -1542,8 +1711,10 @@
 				98E8C1BD1C49E5EB00310091 /* CityListVC.m in Sources */,
 				C9342B311C4A2784000C8B97 /* MyShopCarBrandNameInfo.m in Sources */,
 				DF0991C81C5767C1001B6F2D /* ScrollViewTestViewController.m in Sources */,
+				2F8AF7881CCF988A00E8AAD0 /* MyWalletModel.m in Sources */,
 				98A109B21CC5FD1D0040549D /* TardeCancelOrderViewController.m in Sources */,
 				C9622DC51C4B40E700AE849E /* ZLNavigationController.m in Sources */,
+				2F8AF79D1CCF989800E8AAD0 /* MyShopTableViewCell.m in Sources */,
 				DF0991CF1C59A777001B6F2D /* SubmitOrderViewController.m in Sources */,
 				C9622DCA1C4B40E700AE849E /* ZLPhotoPickerCollectionViewCell.m in Sources */,
 				98A109B31CC5FD1D0040549D /* TheOrderViewController.m in Sources */,
@@ -1572,17 +1743,21 @@
 				98E8C1F21C49E60900310091 /* GTMBase64.m in Sources */,
 				DF563C7F1CBB91CA00C8C031 /* AddNewPartsVC.m in Sources */,
 				58099C021CCE584F00BE194E /* SupplierTableViewCell.m in Sources */,
+				2F8AF7891CCF988A00E8AAD0 /* MyWalletView.m in Sources */,
 				C9622DC21C4B40E700AE849E /* ZLPhotoAssets.m in Sources */,
 				C9622DC81C4B40E700AE849E /* ZLPhotoPickerViewController.m in Sources */,
+				2F8AF79C1CCF989800E8AAD0 /* MyShopModel.m in Sources */,
 				58099BF11CCE584F00BE194E /* ChoosePartsViewController.m in Sources */,
 				C9A0D7321C4A2E2A0028EEB8 /* FSDropDownMenu.m in Sources */,
 				98A109AE1CC5FD1D0040549D /* MaintainOrderViewController.m in Sources */,
+				2F8AF78B1CCF988A00E8AAD0 /* WithdrawalView.m in Sources */,
 				C9622DBB1C4B40E700AE849E /* ZLPhotoRect.m in Sources */,
 				98E8C1EF1C49E60900310091 /* BaseViewController.m in Sources */,
 				C9622DD41C4B40EE00AE849E /* DACircularProgressView.m in Sources */,
 				58099C201CCE5C4D00BE194E /* RequireListModel.m in Sources */,
 				98A109941CC5FC9F0040549D /* MaintainModel.m in Sources */,
 				C9A0D7381C4A430A0028EEB8 /* MyShopCarAccessoryNameInfo.m in Sources */,
+				2F8AF7871CCF988A00E8AAD0 /* MyWalletViewController.m in Sources */,
 				C9622DC31C4B40E700AE849E /* ZLPhotoPickerDatas.m in Sources */,
 				9843A1581C9CECEF00FAE890 /* HmacSHA256.m in Sources */,
 				58099BFF1CCE584F00BE194E /* SupplierStoreListModel.m in Sources */,
@@ -1600,11 +1775,14 @@
 				98E8C1F51C49E60900310091 /* NS+Base64.m in Sources */,
 				98E8C1C41C49E5EB00310091 /* ZHQUtil.m in Sources */,
 				58099C1A1CCE5BD800BE194E /* CellFactory.m in Sources */,
+				2F8AF78A1CCF988A00E8AAD0 /* WithdrawalViewController.m in Sources */,
 				C9622DC61C4B40E700AE849E /* ZLPhotoPickerAssetsViewController.m in Sources */,
+				2F8AF79B1CCF989800E8AAD0 /* CustomSegment.m in Sources */,
 				DF563CB41CBC7DFF00C8C031 /* MultilineTextInputCell.m in Sources */,
 				987D78BA1C9CF98D005A0A2C /* UserStoreModel.m in Sources */,
 				DF0991781C55F676001B6F2D /* HomeVC.m in Sources */,
 				58099C341CCE5E6700BE194E /* DetailsTableViewCell.m in Sources */,
+				2F8AF79A1CCF989800E8AAD0 /* MyShopViewController.m in Sources */,
 				98A109B01CC5FD1D0040549D /* OrderTableViewCell.m in Sources */,
 				58099BF31CCE584F00BE194E /* SupplierReceiveViewController.m in Sources */,
 				DF0991881C55F6B7001B6F2D /* SearchBarViewController.m in Sources */,

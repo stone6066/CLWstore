@@ -7,6 +7,7 @@
 //
 
 #import "BaseTabBarController.h"
+#import "MyShopViewController.h"
 
 @interface BaseTabBarController ()<
 UITabBarControllerDelegate
@@ -86,8 +87,10 @@ UITabBarControllerDelegate
     UIStoryboard *shopSB = [UIStoryboard storyboardWithName:@"Shop" bundle:nil];
     UINavigationController *shopCarNav = [shopSB instantiateViewControllerWithIdentifier:@"ShopNav"];
     
-    UIStoryboard *myShopSB = [UIStoryboard storyboardWithName:@"MyShop" bundle:nil];
-    UINavigationController *orderNav = [myShopSB instantiateViewControllerWithIdentifier:@"MyShopNav"];
+    //    UIStoryboard *myShopSB = [UIStoryboard storyboardWithName:@"MyShop" bundle:nil];
+    //    UINavigationController *orderNav = [myShopSB instantiateViewControllerWithIdentifier:@"MyShopNav"];
+    MyShopViewController *myShopSB = [[MyShopViewController alloc] init];
+    UINavigationController *orderNav = [[UINavigationController alloc] initWithRootViewController:myShopSB];
     
     UIStoryboard *userSB = [UIStoryboard storyboardWithName:@"User" bundle:nil];
     UINavigationController *userNav = [userSB instantiateViewControllerWithIdentifier:@"UserNav"];

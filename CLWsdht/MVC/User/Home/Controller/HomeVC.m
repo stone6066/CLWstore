@@ -16,7 +16,7 @@
 #import "AddressJSONModel.h"//地址model
 #import "MyOrderViewController.h"//我的订单VC
 #import "SupplierReceiveViewController.h"
-
+#import "MyWalletViewController.h"//我的钱包VC
 
 @interface HomeVC () <UISearchBarDelegate> {
     
@@ -229,8 +229,12 @@
     [self presentViewController:nav animated:YES completion:^{}];
     
 }
-#pragma mark -我要买车
+#pragma mark -我的钱包
 - (IBAction)myCaseBtn:(UIButton *)sender {
+    [self setHidesBottomBarWhenPushed:YES];
+    MyWalletViewController *wallet = [[MyWalletViewController alloc] init];
+    [self.navigationController pushViewController:wallet animated:YES];
+    [self setHidesBottomBarWhenPushed:NO];
 }
 #pragma mark -我要买件
 - (IBAction)neederBtn:(UIButton *)sender {
