@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Id</key>
+		<string>d0637b2d-1df8-48bb-9f51-5bcbcf90b4e5</string>
+		<key>Name</key>
+		<string>副厂</string>
+		<key>Sort</key>
+		<integer>4</integer>
+	</dict>
+	<dict>
+		<key>Id</key>
+		<string>4796a8ac-e72b-4bf0-b256-9ab58f17b49d</string>
+		<key>Name</key>
+		<string>正厂</string>
+		<key>Sort</key>
+		<integer>5</integer>
+	</dict>
+	<dict>
+		<key>Id</key>
+		<string>d6d817ab-186e-4ec8-a616-afe261c29bbf</string>
+		<key>Name</key>
+		<string>拆车件</string>
+		<key>Sort</key>
+		<integer>3</integer>
+	</dict>
+</array>
+</plist>

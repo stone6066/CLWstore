@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NormalCell" rowHeight="55" id="KGk-i7-Jjw" customClass="NormalCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJR-BN-vgF">
+                        <rect key="frame" x="10" y="10" width="110" height="34.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="110" id="mcQ-5D-Feg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_right.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Or-cZ-tgm">
+                        <rect key="frame" x="260" y="10" width="50" height="34.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="dSV-TW-zyB"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="6Or-cZ-tgm" secondAttribute="trailing" constant="10" id="Dyf-w7-ONV"/>
+                    <constraint firstAttribute="bottom" secondItem="hJR-BN-vgF" secondAttribute="bottom" constant="10" id="Jfg-7j-fn7"/>
+                    <constraint firstItem="hJR-BN-vgF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="KpM-TR-LkE"/>
+                    <constraint firstAttribute="bottom" secondItem="6Or-cZ-tgm" secondAttribute="bottom" constant="10" id="XLh-nK-PhB"/>
+                    <constraint firstItem="hJR-BN-vgF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mpt-pp-hQh"/>
+                    <constraint firstItem="6Or-cZ-tgm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mvJ-Sv-0kN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="hJR-BN-vgF" id="JcB-56-X94"/>
+            </connections>
+            <point key="canvasLocation" x="330" y="384.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_right.png" width="98" height="98"/>
+    </resources>
+</document>
