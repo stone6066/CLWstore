@@ -48,7 +48,7 @@
     [self initData];
     
     [self initUI];
-    
+    [self std_regsNotification];
 }
 
 
@@ -410,6 +410,32 @@
                                       //请求异常
                                       [SVProgressHUD showErrorWithStatus:k_Error_Network];
                                   }];
+    
+}
+
+
+- (void)execute:(NSNotification *)notification {
+    if([notification.name isEqualToString:k_Notification_CityBtnName_Shop] ){
+        userSeletedCity=ApplicationDelegate.currentCity;
+        userSeletedCityID = ApplicationDelegate.currentCityID;
+        UIButton *btn = (UIButton *)self.navigationItem.rightBarButtonItem.customView;
+        [btn setTitle:userSeletedCity forState:UIControlStateNormal];
+        btn.titleLabel.text = userSeletedCity;
+        
+    }
+}
+-(void)std_regsNotification{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(execute:)
+                                                 name:k_Notification_CityBtnName_Shop
+                                               object:nil];
+}
+
+- (void) dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:k_Notification_CityBtnName_Shop
+                                                  object:nil];
     
 }
 @end

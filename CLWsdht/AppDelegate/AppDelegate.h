@@ -67,6 +67,10 @@
 @property (copy, nonatomic) NSString *currentLat;
 
 
+/*
+ *定位代理去重计数
+ */
+@property (assign, nonatomic) NSInteger endLocaltion;
 
 
 
@@ -76,7 +80,8 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
-
+-(void)std_readCityInfo;
+-(void)std_saveCityName:(NSString*)cityName;
 
 @end
 

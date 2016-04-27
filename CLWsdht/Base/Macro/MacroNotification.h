@@ -23,7 +23,19 @@
 #define kNotiCenter [NSNotificationCenter defaultCenter]
 
 
+//定位结束后 通知修改界面btn
+#define k_Notification_CityBtnName_Home  @"k_Notification_CityBtnName_Home"
 
+//定位结束后 通知修改界面btn
+#define k_Notification_CityBtnName_Shop  @"k_Notification_CityBtnName_Shop"
+
+//定位失败后 通知HomeVc打开城市设置界面
+#define k_Notification_CitySelect_Home  @"k_Notification_CitySelect_Home"
+
+//
+#define k_HintMessage_Local_AppDelegate @"当前设置城市与定位不一致，是否更换？"
+
+#define k_HintMessage_NoLocal_AppDelegate @"位置服务不可用,请手动设置!"
 
 
 
