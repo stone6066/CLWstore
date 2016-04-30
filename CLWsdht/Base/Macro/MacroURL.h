@@ -84,7 +84,12 @@
 
 
 
+/**
+ *      个人信息
+ */
 
+#define k_url_GetAddressList         @"address.asmx/UsrGetList"//获取地址列表
+#define k_url_AddAddress         @"address.asmx/AddUsrAddress"//添加地址
 
 
 
