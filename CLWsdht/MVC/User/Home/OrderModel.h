@@ -14,12 +14,14 @@
 @property (nonatomic, copy) NSString *StoreImg;
 @property (nonatomic, copy) NSString *StoreUrl;
 @property (nonatomic, copy) NSString *Price;
+@property (nonatomic, copy) NSString *Id;
 @property (nonatomic, copy) NSString *StoreName;//店铺名称
-@property (nonatomic, copy) NSString *PartsMobile;
+@property (nonatomic, copy) NSString *PartsMobile;//来源
 @property (nonatomic, copy) NSString *StoreId;
 @property (nonatomic, copy) NSString *State;
 @property (nonatomic, copy) NSString *GarageState;
 @property (nonatomic, copy) NSString *Addr;//收货地址
+@property (nonatomic, copy) NSString *Serial;
 
 @property (nonatomic, strong) NSArray *PartsList;
 
