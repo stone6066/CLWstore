@@ -8,15 +8,24 @@
 
 #import <UIKit/UIKit.h>
 #import "GoodModel.h"
+#import "OrderModel.h"
+#import "TheOrderViewController.h"
 
 @interface OrderTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) TheOrderViewController* controller;
 @property (weak, nonatomic) IBOutlet UIImageView *Url;
 @property (weak, nonatomic) IBOutlet UILabel *Name;
 @property (weak, nonatomic) IBOutlet UILabel *Price;
 @property (weak, nonatomic) IBOutlet UILabel *Cnt;
 @property (weak, nonatomic) IBOutlet UIButton *changeBtn;
+@property (weak, nonatomic) IBOutlet UITextField *changTextField;
+@property (weak, nonatomic) IBOutlet UIButton *sureBtn;
 
-- (void)setOrderWithModel:(GoodModel *)model andWtihState:(NSString *)state;
+@property (nonatomic, strong) OrderModel *OM;
+@property (nonatomic, strong) GoodModel *GM;
+
+- (void)setOrderWithModel:(GoodModel *)model andWtihState:(NSString *)state andWithOrderModel:(OrderModel *)om;
 - (void)assginOrderWithModel:(GoodModel *)cellModel;
 
 
