@@ -20,13 +20,17 @@
 
 @interface TheOrderViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *orderTableView;
+
 @property (nonatomic, strong) NSMutableArray *partlistArr;
 
 
 @end
 
 @implementation TheOrderViewController
+- (void)viewWillAppear:(BOOL)animated{
+    [self GetOrderListByNetwork];
+    [self setUpView];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,9 +38,17 @@
     _partlistArr = [[NSMutableArray alloc] initWithCapacity:0];
     SingleCase *singleCase = [SingleCase sharedSingleCase];
     _storeId = singleCase.str;
-    [self GetOrderListByNetwork];
-    [self setUpView];
+    
+//    [self addObserver:self forKeyPath:@"orderTableView" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
 }
+
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+//{
+//    if ([keyPath isEqualToString:@"orderTableView"])
+//    {
+//        NSLog(@"1111");
+//    }
+//}
 
 //UI界面
 -(void)setUpView{
@@ -103,6 +115,9 @@
                                           if (jsonDic[@"Success"]) {
                                               //成功
                                               NSLog(@"------------------%@", jsonDic);
+
+                                              NSLog(@"%@ %@", [NSThread currentThread].name, self);
+                                              
                                               OrderModel *orderModel = [[OrderModel alloc] init];
                                               _partlistArr = [orderModel assignModelWithDict:jsonDic];
                                               [_orderTableView reloadData];
@@ -241,22 +256,25 @@
     [okOederBtn setBackgroundColor:[UIColor redColor]];
     [okOederBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [okOederBtn setTitle:@"确认订单" forState:UIControlStateNormal];
+    [okOederBtn setTag:section];
     [okOederBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [okOederBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
-    //[button addTarget:self action:@selector(button:) forControlEvents:UIControlEventTouchUpInside];
+    [okOederBtn addTarget:self action:@selector(okOederBtn:) forControlEvents:UIControlEventTouchUpInside];
     //发货按钮
     UIButton *payButton = [[UIButton alloc] initWithFrame:CGRectMake(footerView.frame.size.width-80, footerView.frame.size.height-35, 65, 30)];
     [payButton setBackgroundColor:[UIColor redColor]];
     [payButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [payButton setTitle:@"发货" forState:UIControlStateNormal];
+    [payButton setTag:section];
     [payButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [payButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
-    //[button addTarget:self action:@selector(button:) forControlEvents:UIControlEventTouchUpInside];
+    [payButton addTarget:self action:@selector(payButton:) forControlEvents:UIControlEventTouchUpInside];
     //评价按钮
     UIButton *judgeBtn = [[UIButton alloc] initWithFrame:CGRectMake(footerView.frame.size.width-80, footerView.frame.size.height-35, 65, 30)];
     [judgeBtn setBackgroundColor:[UIColor redColor]];
     [judgeBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [judgeBtn setTitle:@"评价" forState:UIControlStateNormal];
+    [judgeBtn setTag:section];
     [judgeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [judgeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
     //[button addTarget:self action:@selector(button:) forControlEvents:UIControlEventTouchUpInside];
@@ -275,6 +293,134 @@ addSubview:payButton];
     return footerView;
 }
 
+
+#pragma mark -- 订单上按钮响应事件
+//确认按钮
+- (void)okOederBtn:(UIButton *)btn{
+    OrderModel *OM = [[OrderModel alloc] init];
+    OM = _partlistArr[btn.tag];
+    
+    [SVProgressHUD showWithStatus:k_Status_Load];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@",BASEURL,@"Usr.asmx/StoreConfirm"];
+    NSDictionary *paramDict = @{
+                                @"ordersId":OM.Id,
+                                @"isConfirm":@"true",
+                                };
+    
+    
+    [ApplicationDelegate.httpManager POST:urlStr
+                               parameters:paramDict
+                                 progress:^(NSProgress * _Nonnull uploadProgress) {}
+                                  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                      //http请求状态
+                                      if (task.state == NSURLSessionTaskStateCompleted) {
+                                          //            NSDictionary *jsonDic = [JYJSON dictionaryOrArrayWithJSONSData:responseObject];
+                                          NSError* error;
+                                          NSDictionary* jsonDic = [NSJSONSerialization
+                                                                   JSONObjectWithData:responseObject
+                                                                   options:kNilOptions
+                                                                   error:&error];
+                                          if (jsonDic[@"Success"]) {
+                                              //成功
+                                              NSLog(@"------------------%@", jsonDic);
+                                              [_orderTableView reloadData];
+                                              [SVProgressHUD showSuccessWithStatus:  k_Success_Load];
+                                              
+                                          } else {
+                                              //失败
+                                              [SVProgressHUD showErrorWithStatus:k_Error_WebViewError];
+                                              
+                                          }
+                                          
+                                      } else {
+                                          [SVProgressHUD showErrorWithStatus:k_Error_Network];
+                                      }
+                                      
+                                  } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                      //请求异常
+                                      [SVProgressHUD showErrorWithStatus:k_Error_Network];
+                                  }];
+
+}
+//发货按钮
+- (void)payButton:(UIButton *)btn{
+    
+    
+}
+//改价按钮
+- (void)changGoodPrice:(GoodModel *)goodModel andWithModel:(OrderModel *)orderModel andWithChangePrice:(NSString *)text{
+    [SVProgressHUD showWithStatus:k_Status_Load];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@",BASEURL,@"Usr.asmx/StoreConfirmPrice"];
+    
+    NSDictionary *competitionOrderJson = @{
+                                           @"Id":goodModel.Id,
+                                           @"OrdersId":orderModel.Id,
+                                           @"PartsId":goodModel.PartsId,
+                                           @"Cnt":goodModel.Cnt,
+                                           @"Price":goodModel.Price,
+                                           @"Point":@"",
+                                           @"Evaluate":@"",
+                                           @"CurrentPrice":text,
+                                           @"Reason":@""
+                                           };
+    NSError *error;
+    NSData *competitionOrdersJsonData = [NSJSONSerialization dataWithJSONObject:competitionOrderJson options:NSJSONWritingPrettyPrinted error:&error];
+    NSString *competitionOrdersJsonDataJsonString = [[NSString alloc] initWithData:competitionOrdersJsonData encoding:NSUTF8StringEncoding];
+
+    
+    NSDictionary *paramDict = @{
+                                @"ordersId":orderModel.Serial,
+                                @"ordersPartsJson":competitionOrdersJsonDataJsonString,
+                                };
+    
+    
+    [ApplicationDelegate.httpManager POST:urlStr
+                               parameters:paramDict
+                                 progress:^(NSProgress * _Nonnull uploadProgress) {}
+                                  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                      //http请求状态
+                                      if (task.state == NSURLSessionTaskStateCompleted) {
+                                          //            NSDictionary *jsonDic = [JYJSON dictionaryOrArrayWithJSONSData:responseObject];
+                                          NSError* error;
+                                          NSDictionary* jsonDic = [NSJSONSerialization
+                                                                   JSONObjectWithData:responseObject
+                                                                   options:kNilOptions
+                                                                   error:&error];
+                                          if (jsonDic[@"Success"]) {
+                                              //成功
+                                              NSLog(@"------------------%@", jsonDic);
+                                              
+                                              // 取得ios系统唯一的全局的广播站 通知中心
+                                              NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+                                              //设置广播内容
+                                              //将内容封装到广播中 给ios系统发送广播
+                                              // ChangeTheme频道
+                                              [nc postNotificationName:@"ChangePrice" object:self];
+
+                                              [self.orderTableView reloadData];
+                                              [SVProgressHUD showSuccessWithStatus:@"修改成功"];
+                                              
+                                          } else {
+                                              //失败
+                                              [SVProgressHUD showErrorWithStatus:k_Error_WebViewError];
+                                              
+                                          }
+                                          
+                                      } else {
+                                          [SVProgressHUD showErrorWithStatus:k_Error_Network];
+                                      }
+                                      
+                                  } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                      //请求异常
+                                      [SVProgressHUD showErrorWithStatus:k_Error_Network];
+                                  }];
+
+}
+
+
+
 //返回某个section中rows的个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     OrderModel *OM = [[OrderModel alloc] init];
@@ -290,10 +436,11 @@ addSubview:payButton];
     OrderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"orderCellIdentifer"];
     if (cell == nil) {
         cell = [[OrderTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:userStoreCellIdentifer];
-    }    
+    }
+    cell.controller = self;
     OrderModel *OM=_partlistArr[indexPath.section];
     GoodModel *GM=OM.PartsList[indexPath.row];
-    [cell setOrderWithModel:GM andWtihState:_orderState];
+    [cell setOrderWithModel:GM andWtihState:_orderState andWithOrderModel:OM];
     
     return cell;
 }

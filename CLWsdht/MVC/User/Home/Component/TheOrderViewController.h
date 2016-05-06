@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GoodModel.h"
+#import "OrderModel.h"
 
 @interface TheOrderViewController : UIViewController
 
+@property (nonatomic, strong) UITableView *orderTableView;
 @property (nonatomic, copy) NSString *orderState;
 @property (nonatomic, copy) NSString *storeId;
 
+- (void)changGoodPrice:(GoodModel *)goodModel andWithModel:(OrderModel *)orderModel andWithChangePrice:(NSString *)text;
 @end

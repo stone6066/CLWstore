@@ -284,6 +284,9 @@
 }
 #pragma mark -- 我的订单
 - (IBAction)myOrderBtn:(UIButton *)sender {
+    UIBarButtonItem *backIetm = [[UIBarButtonItem alloc] init];
+    self.navigationItem.backBarButtonItem = backIetm;
+    backIetm.title =@"返回";
     [self setHidesBottomBarWhenPushed:YES];
     MyOrderViewController *myOrderVC = [[MyOrderViewController alloc] init];
     [self.navigationController pushViewController:myOrderVC animated:YES];
