@@ -185,7 +185,8 @@ FSDropDownMenuDelegate
 -(void)initUI
 {
     _consContentViewWidth.constant = SCREEN_WIDTH;
-    _consContentViewHeight.constant = CGRectGetMaxY(_btnRelease.frame) + 20;
+    _consContentViewHeight.constant = CGRectGetMaxY(_btnRelease.frame) + 20+100;
+   
 }
 
 #pragma mark - Notification Methods
