@@ -47,8 +47,8 @@
     self.navigationItem.hidesBackButton = YES;
     self.hidesBottomBarWhenPushed = YES;
     
-//    _telTextField.text = @"13351784891";
-//    _passWordTextField.text = @"123";
+    _telTextField.text = @"13351784891";
+    _passWordTextField.text = @"123";
     
     i_times = 0;
     _btnLogin.layer.cornerRadius = 5;
